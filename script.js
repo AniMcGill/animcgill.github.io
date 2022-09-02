@@ -120,6 +120,7 @@ class MyHeader extends HTMLElement {
       <li class="medium-box"><a class="stickA" href="newsletter.html#sticky">Newsletters</a></li>
       <li class="medium-box"><a class="stickA" href="contact.html#sticky">Contact Us</a></li>
       <li class="medium-box"><a class="stickA" href="faq.html#sticky">FAQ</a></li>
+	  
     </ul>
   </nav>
     
