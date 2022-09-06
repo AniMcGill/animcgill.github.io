@@ -184,6 +184,11 @@ class MyFooter extends HTMLElement {
 
 customElements.define('my-footer',MyFooter)
 
+function autoScrollTitle() {
+  document.getElementById('title').scrollIntoView();
+}
+function autoScroll() {
+  window.setTimeout( function () { autoScrollTitle(); }, 3000 );
+}
 
-
-
+autoScroll();

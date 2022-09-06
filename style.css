@@ -23,6 +23,7 @@ time, mark, audio, video, img {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+  scroll-behavior: smooth;
 
 }
 /* HTML5 display-role reset for older browsers */
@@ -574,7 +575,8 @@ justify-content: center;
 
 .hph1{
   font-size: 5vw;
-  padding: 50px;
+  padding: 60px;
+  padding-bottom: 20px;
   text-align: center;
   color:  #4B4233;
 }
