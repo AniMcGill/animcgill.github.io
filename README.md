@@ -1,5 +1,7 @@
 # McGill Student's Anime Club (MSAC) Website
 
+Link to site: https://msac.ssmu.ca/
+
 The MSAC website is another medium through which potential members can get to know MSAC and through which current members can access bonus features.  It contains a :
 
 1. FAQ page to answer any questions members may have. 
