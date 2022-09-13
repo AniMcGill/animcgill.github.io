@@ -60,4 +60,4 @@ All in all, this project took me three weeks to complete. I have been told that 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
-#### Made with <3 by Christina in Montreal
+#### Made with <3 by Christina in Montreal, work carried on by ivey-kun :D
