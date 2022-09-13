@@ -118,8 +118,10 @@ class MyHeader extends HTMLElement {
       <li class="medium-box"><a class="stickA" href="index.html#sticky">Home Page</a></li>
       <li class="medium-box"><a class="stickA" href="art.html#sticky">Art</a></li>
       <li class="medium-box"><a class="stickA" href="newsletter.html#sticky">Newsletters</a></li>
+      <li class="medium-box"><a class="stickA" href="events.html#sticky">Events</a></li>
       <li class="medium-box"><a class="stickA" href="contact.html#sticky">Contact Us</a></li>
       <li class="medium-box"><a class="stickA" href="faq.html#sticky">FAQ</a></li>
+      <li class="medium-box"><a class="stickA" href="execs.html#sticky">Our Execs</a></li>
 	  
     </ul>
   </nav>
@@ -193,3 +195,4 @@ function autoScroll() {
 }
 
 autoScroll();
+
