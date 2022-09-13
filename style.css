@@ -398,7 +398,7 @@ main{
   justify-content: center;
 }
 
-.form-container-exec{
+.form-container{
   background-color: f2f2f2;
   font-size: 40px;
   padding: 20px;
@@ -428,11 +428,11 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #7B6C55;
 }
-.sform-container-exec{
+.sform-container{
   width: 100%;
   
 }
-.sform-container-exec li{
+.sform-container li{
   margin: 10px 0px;
   font-size: 20px;
 }
@@ -444,7 +444,7 @@ input[type=submit]:hover {
 }
 
 /*FAQ*/
-.faq-container-exec{
+.faq-container{
   display: block;
   background-color: #f2f2f2;
   padding: 20px;
@@ -453,7 +453,7 @@ input[type=submit]:hover {
   width: 70%;
 }
 
-.faq-container-exec h3{
+.faq-container h3{
   font-size: 22px;
   font-weight: bold;
   margin: 40px 0px 15px 0px;
@@ -462,7 +462,7 @@ input[type=submit]:hover {
   align-items: center;
 }
 
-.faq-container-exec h4{
+.faq-container h4{
   font-size: 20px;
   font-weight: bold;
   margin: 0px 0px -10px 0px;
@@ -471,13 +471,13 @@ input[type=submit]:hover {
   align-items: center;
 }
 
-.faq-container-exec p{
+.faq-container p{
   font-size: 20px;
   line-height: 1.75;
 }
 /*Newsletter*/
 
-.news-container-exec{
+.news-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -488,16 +488,16 @@ input[type=submit]:hover {
 
 
   
-.mnews-container-exec{
+.mnews-container{
 display: flex;
 flex-direction: column;
 }
 
-.snews-container-exec{
+.snews-container{
   margin: 20px;
 }  
   
-.snews-container-exec > h4{
+.snews-container > h4{
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 5px;
@@ -549,7 +549,7 @@ justify-content: center;
 
 
 
-.gallery-container-exec{
+.gallery-container{
     display: flex;
     flex-wrap: wrap;
 }
@@ -570,8 +570,8 @@ justify-content: center;
 
 /*Home Page*/
 
-/* container-exec holding the image and the text */
-.hp-container-exec{
+/* container holding the image and the text */
+.hp-container{
   display: block;
   width: min(90%, 80.5rem);
   margin-inline: auto;
@@ -606,7 +606,7 @@ justify-content: center;
   color:  #4B4233;
 }
 
-.hpimg-container-exec {
+.hpimg-container {
   position: relative;
   text-align: center;
 }
@@ -654,7 +654,7 @@ font-size:40px;
     
 }
 
-/* the css for the sliding image gallery in exec*/
+the css for the sliding image gallery in exec
 .p2 {
   font-size: 22pt;
 }
