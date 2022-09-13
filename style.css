@@ -707,7 +707,7 @@ font-size:40px;
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
-  padding: 8px 12px;
+  padding: 58px 12px;
   position: absolute;
   top: 0;
 }
@@ -735,9 +735,11 @@ font-size:40px;
 /* Add a transparency effect for thumnbail images */
 .demo {
   opacity: 0.6;
+  transition: opacity 0.5s;
 }
 
 .active,
 .demo:hover {
   opacity: 1;
+  transition: opacity 0.5s;
 }
