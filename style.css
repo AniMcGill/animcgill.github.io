@@ -132,10 +132,11 @@ nav{
 }
 .sticky a{
   color: #4B4233;
+  
   transition: color 0.2s, font-size 0.2s;
   text-decoration: none;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 130%;
+  font-size: 120%;
   font-weight: 600;
 }
 
@@ -151,18 +152,19 @@ font-size: 150%;
 
 
 .medium-box{
-    margin-top: 7px; 
-  margin-right: 5vw;
-  margin-left: 5vw;
+  margin:auto;
   height: 30px;
 }
 
 .list-inline{
-  display: flex;
-  justify-content: center;
+  display:flex;
   align-items: center;
+  font-size: medium;
   width: 100vw;
-  list-style: none;
+  text-align: center;
+  
+
+  list-style:none;
   padding: 20px 0px 20px 0px;
   background-color: #fff1ec;
 }
@@ -396,7 +398,7 @@ main{
   justify-content: center;
 }
 
-.form-container{
+.form-container-exec{
   background-color: f2f2f2;
   font-size: 40px;
   padding: 20px;
@@ -426,11 +428,11 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #7B6C55;
 }
-.sform-container{
+.sform-container-exec{
   width: 100%;
   
 }
-.sform-container li{
+.sform-container-exec li{
   margin: 10px 0px;
   font-size: 20px;
 }
@@ -442,7 +444,7 @@ input[type=submit]:hover {
 }
 
 /*FAQ*/
-.faq-container{
+.faq-container-exec{
   display: block;
   background-color: #f2f2f2;
   padding: 20px;
@@ -451,7 +453,7 @@ input[type=submit]:hover {
   width: 70%;
 }
 
-.faq-container h3{
+.faq-container-exec h3{
   font-size: 22px;
   font-weight: bold;
   margin: 40px 0px 15px 0px;
@@ -460,7 +462,7 @@ input[type=submit]:hover {
   align-items: center;
 }
 
-.faq-container h4{
+.faq-container-exec h4{
   font-size: 20px;
   font-weight: bold;
   margin: 0px 0px -10px 0px;
@@ -469,13 +471,13 @@ input[type=submit]:hover {
   align-items: center;
 }
 
-.faq-container p{
+.faq-container-exec p{
   font-size: 20px;
   line-height: 1.75;
 }
 /*Newsletter*/
 
-.news-container{
+.news-container-exec{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -486,16 +488,16 @@ input[type=submit]:hover {
 
 
   
-.mnews-container{
+.mnews-container-exec{
 display: flex;
 flex-direction: column;
 }
 
-.snews-container{
+.snews-container-exec{
   margin: 20px;
 }  
   
-.snews-container > h4{
+.snews-container-exec > h4{
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 5px;
@@ -547,7 +549,7 @@ justify-content: center;
 
 
 
-.gallery-container{
+.gallery-container-exec{
     display: flex;
     flex-wrap: wrap;
 }
@@ -568,8 +570,8 @@ justify-content: center;
 
 /*Home Page*/
 
-/* Container holding the image and the text */
-.hp-container{
+/* container-exec holding the image and the text */
+.hp-container-exec{
   display: block;
   width: min(90%, 80.5rem);
   margin-inline: auto;
@@ -604,7 +606,7 @@ justify-content: center;
   color:  #4B4233;
 }
 
-.hpimg-container {
+.hpimg-container-exec {
   position: relative;
   text-align: center;
 }
@@ -652,3 +654,90 @@ font-size:40px;
     
 }
 
+/* the css for the sliding image gallery in exec*/
+.p2 {
+  font-size: 22pt;
+}
+/* Position the image container-exec (needed to position the left and right arrows) */
+.container-exec {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position:absolute;
+
+  width: auto;
+  padding: 16px;
+  margin:inherit;
+  background-color: #222;
+  color: #fff1ec;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* container-exec for image text */
+.caption-container-exec {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
