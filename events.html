@@ -34,14 +34,74 @@
   <div class="sform-container">
     <br>
   <h2 class="styleh2">Events</h2>
-    <ul>
-  <li>Coming soon!</li>
-  <!-- <li>1. If you wish to ask a question that has not been answered in the <a href="faq.html">FAQ section</a>.</li>
-    
-  <li>2. If you have feedback, information or complaints you would like to bring up to the members of the Executive or Moderation team.</li>
-    
-<li>Please leave your e-mail or discord name if you would like the execs/mods to follow up with you.</li> -->
+    <br>
+     <!-- container-exec for the image gallery -->
+     <div class="container-exec">
 
+      <!-- Full-width images with number text -->
+
+    
+      <div class="mySlides">
+        <img src="https://media.discordapp.net/attachments/879166679576354857/1019637610198605834/Anime_Pilgrammage_quiz.png" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="https://media.discordapp.net/attachments/879166679576354857/1019637609338781736/Pompo_Screening.png" style="width:100%">
+      </div>
+
+    
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+      <!-- Image text -->
+      <div class="caption-container-exec">
+        <p id="caption"></p>
+      </div>
+    
+      <!-- Thumbnail images -->
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="https://media.discordapp.net/attachments/879166679576354857/1019637609338781736/Pompo_Screening.png" style="width:100%" onclick="currentSlide(1)" alt="Anime Trivia Quiz">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="https://media.discordapp.net/attachments/879166679576354857/1019637610198605834/Anime_Pilgrammage_quiz.png" style="width:100%" onclick="currentSlide(1)" alt="Screening: Pompo">
+        </div>
+
+      </div>
+    </div> 
+    
+    <script>
+      let slideIndex = 1;
+    showSlides(slideIndex);
+    /* stolen from https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp */
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      let captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    } 
+    </script>
 </main>
 
     
