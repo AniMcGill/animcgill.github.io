@@ -56,6 +56,17 @@ What I learned is that google and youtube tutorials are my best friend. On a mor
 
 All in all, this project took me three weeks to complete. I have been told that it is possible reproduce my website in 30 minutes. Thus, my goal and the marker of my improvement will be to reduce the time it takes for me to build a project.  
 
+<<<<< From here on are features added by Kevin >>>>>
+
+Events Page (events.html): 
+Here there is a gallery of pictures with matching thumbnails under. For the best effect, use widescreen ratio (16:9). In the code, there is a comment that reads " Full-width images"; you can simply replace the link to the image by copying a discord image link. The way it is organized is "starting soonest first". 
+There is also a comment 'Thumbnail images' where you can edit the "alt" text (the text that will display in the title bar) and you can use the same image link as the one for full width; the app will resize it to thumbnail sized automatically. 
+When there are multiple events, you have to make sure to change "onclick" so that the event happening soonest has onclick="currentSlide(1)", the event after that would have onclick="currentSlide(2)", etc.
+
+I also added a link for past events and pictures (past_events.html), it's supposed to be a photodump because I don't have a database yet. Every past event + pictures will just get dumped in a giant gallery in no particular order. 
+
+execs.html:
+Same gallery logic as the events page but I removed the "full width image" since profile pictures are generally square. Instead, I decided to put some text to describe the execs. You can put anything you want. The alt text is the position and name of the execs.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
