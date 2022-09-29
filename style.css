@@ -250,11 +250,17 @@ hr{
   padding: 10px;
   margin: 12px 12px 10px 10px;
 }
+.instagram{
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  margin: 12px 10px 10px 10px;
+}
 .email{
   width: 40px;
   height: 40px;
   padding: 10px;
-  margin: 7px 10px 12px 10px;
+  margin: 9px 10px 12px 10px;
 }
 
 .newsletter{
@@ -361,24 +367,7 @@ height: inherit;
   margin: 20px 10px 20px 10px;
 }
 
-.discord{
-  width: 30px;
-  height: 30px;
-  padding: 10px;
-  margin: 13px 10px 10px 10px;
-}
-.facebook{
-  width: 30px;
-  height: 30px;
-  padding: 10px;
-  margin: 12px 12px 10px 10px;
-}
-.email{
-  width: 30px;
-  height: 30px;
-  padding: 10px;
-  margin: 7px 10px 12px 10px;
-}
+
   .made-with-love{
   font-size: 16px;
   text-align: center;

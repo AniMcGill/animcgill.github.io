@@ -144,23 +144,29 @@ class MyFooter extends HTMLElement {
   <footer>
  
     <div class="first-box">
-    <div class="smicons">
-<a href="https://discord.gg/gSAz2GC" target="_blank">
-<img class="discord" src="Discord_logo.png" alt="discord logo"> 
-</a>
-    </div>
+      <div class="smicons">
+        <a href="https://discord.gg/gSAz2GC" target="_blank">
+        <img class="discord" src="Discord_logo.png" alt="discord logo"> 
+        </a>
+      </div>
 
-    <div class="smicons">
-<a href="https://www.facebook.com/McGillAnime/" target="_blank">
-<img class="facebook" src="facebook_logo_3.png" alt="facebook logo">
-</a>
-    </div>
+      <div class="smicons">
+        <a href="https://www.facebook.com/McGillAnime/" target="_blank">
+        <img class="facebook" src="facebook_logo_3.png" alt="facebook logo">
+        </a>
+      </div>
 
-    <div class="smicons">
-<a href="contact.html">
-      <img class="email" src="email_logo.png" alt="email logo">
-</a>
-    </div>
+      <div class="smicons">
+        <a href="https://www.instagram.com/mcgillanime/" target="_blank">
+        <img class="instagram" src="instagram_logo.png" alt="instagram logo">
+        </a>
+      </div>
+
+      <div class="smicons">
+        <a href="contact.html">
+              <img class="email" src="email_logo.png" alt="email logo">
+        </a>
+      </div>
 
     </div>
 <hr>
