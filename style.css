@@ -485,7 +485,7 @@ flex-direction: column;
 }
 
 
-#mc_embed_signup{
+#mc_embed_signup form{
   width: auto !important; 
   background:#fff1ec;
   background-color: #fff1ec;
