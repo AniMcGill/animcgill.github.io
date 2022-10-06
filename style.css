@@ -711,6 +711,7 @@ font-size:2rem;
   .numbertext, .prev,
   .next {
     display: hidden;
+    opacity: 0;
   }
 }
 
