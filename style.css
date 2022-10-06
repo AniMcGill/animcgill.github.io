@@ -710,7 +710,7 @@ font-size:2rem;
 @media screen and (max-width:650px){
   .numbertext, .prev,
   .next {
-    display: hidden;
+    display: none;
     opacity: 0;
   }
 }
