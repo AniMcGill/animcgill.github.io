@@ -485,10 +485,10 @@ flex-direction: column;
 }
 
 
-#mc_embed_signup form{
+#mc_embed_signup {
   width: auto !important; 
-  background:#fff1ec;
-  background-color: #fff1ec;
+  background:#fff1ec!important;
+  background-color: #fff1ec!important;
 }
 
 
