@@ -487,8 +487,8 @@ flex-direction: column;
 
 #mc_embed_signup {
   width: auto !important; 
-  background:#fff1ec!important;
-  background-color: #fff1ec!important;
+  background: transparent!important;
+  background-color: transparent!important;
 }
 
 
