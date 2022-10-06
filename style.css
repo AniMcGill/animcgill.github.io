@@ -707,6 +707,11 @@ font-size:2rem;
   position: absolute;
   top: 0;
 }
+@media screen and (max-width:650px){
+  .numbertext {
+    display: hidden;
+  }
+}
 
 /* container-exec for image text */
 .caption-container-exec {
