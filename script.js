@@ -181,7 +181,7 @@ class MyFooter extends HTMLElement {
       -->
 
 <div class= "third-box">
-   <p class="made-with-love"> Made with 🤎 by Christina, advised by Abu, and art by Song. <a href="https://github.com/AniMcGill/animcgill.github.io
+   <p class="made-with-love"> Made with 🤎 by Christina and Kevin, advised by Abu, and art by Song. <a href="https://github.com/AniMcGill/animcgill.github.io
 "> GitHub Repo</a>  </p>
 </div>
     
