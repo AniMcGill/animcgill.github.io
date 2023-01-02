@@ -724,7 +724,7 @@ font-size:2rem;
 }
 
 .row:after {
-  content: "\n";
+  content: "";
   display: table;
   clear: both;
 }
@@ -733,6 +733,7 @@ font-size:2rem;
 .column {
   float: left;
   width: 16.66%;
+  max-height: 10%
 }
 
 /* Add a transparency effect for thumnbail images */
