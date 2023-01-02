@@ -724,7 +724,7 @@ font-size:2rem;
 }
 
 .row:after {
-  content: "";
+  content: "\n";
   display: table;
   clear: both;
 }
