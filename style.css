@@ -733,7 +733,7 @@ font-size:2rem;
 .column {
   float: left;
   width: 16.66%;
-  max-height: 10%
+  max-height: 80px;
 }
 
 /* Add a transparency effect for thumnbail images */
