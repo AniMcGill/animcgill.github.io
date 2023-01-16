@@ -66,7 +66,7 @@ When there are multiple events, you have to make sure to change "onclick" so tha
 I also added a link for past events and pictures (past_events.html), it's supposed to be a photodump because I don't have a database yet. Every past event + pictures will just get dumped in a giant gallery in no particular order. 
 
 execs.html:
-Same gallery logic as the events page but I removed the "full width image" since profile pictures are generally square. Instead, I decided to put some text to describe the execs. You can put anything you want. The alt text is the position and name of the execs.
+Same gallery logic as the events page but I removed the "full width image" since profile pictures are generally square. Instead, I decided to put some text to describe the execs. You can put anything you want. The alt text is the position and name of the execs. To get the profile image, copy paste the image on a discord channel (I use the bot channel) and use that link. Do not directly use an image found using inspect element, as discord will delete the link when the user changes pfp and it will crash.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
