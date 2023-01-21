@@ -163,10 +163,11 @@ class MyFooter extends HTMLElement {
       </div>
 
       <div class="smicons">
-        <a href="contact.html">
-              <img class="email" src="email_logo.png" alt="email logo">
+        <a href="https://linktr.ee/mcgillanimeclub">
+              <img class="linktree" src="linktree_logo.png" alt="linktree logo">
         </a>
       </div>
+      
 
     </div>
 <hr>
