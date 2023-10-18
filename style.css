@@ -722,7 +722,11 @@ font-size:2rem;
   padding: 2px 16px;
   color: white;
 }
-
+.row {
+  
+  justify-content: center;
+  align-content:center;
+}
 .row:after {
   content: "";
   display: table;
@@ -732,7 +736,8 @@ font-size:2rem;
 /* Six columns side by side */
 .column {
   float: left;
-  width: 16.66%;
+  width: auto;
+	
   
 }
 
@@ -740,8 +745,8 @@ font-size:2rem;
 .demo {
   opacity: 0.6;
   transition: opacity 0.5s;
-  width: 157px!important;
-  height: 157px!important;
+  width: 20vw!important;
+  height:20vw!important;
   object-fit: cover;
 }
 
