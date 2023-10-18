@@ -381,7 +381,7 @@ main{
   padding: 20px;
   margin: 10px;
   border-radius: 10px;
-  width: 70%;
+  width: 75vw;
 }
 input[type=text], input[type=email], textarea{
   width: 100%; 
@@ -727,12 +727,6 @@ font-size:2rem;
   justify-content: center;
   align-content:center;
 }
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* Six columns side by side */
 .column {
   float: left;
@@ -745,8 +739,8 @@ font-size:2rem;
 .demo {
   opacity: 0.6;
   transition: opacity 0.5s;
-  width: 20vw!important;
-  height:20vw!important;
+  width: 25vw!important;
+  height:25vw!important;
   object-fit: cover;
 }
 
