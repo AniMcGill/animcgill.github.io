@@ -740,6 +740,9 @@ font-size:2rem;
 .demo {
   opacity: 0.6;
   transition: opacity 0.5s;
+  width: 157px!important;
+  height: 157px!important;
+  object-fit: cover;
 }
 
 .active,
