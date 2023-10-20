@@ -662,6 +662,7 @@ font-size:2rem;
 /* Hide the images by default */
 .mySlides {
   display: none;
+  margin-left:25%;
 }
 
 /* Add a pointer when hovering over the thumbnail images */
