@@ -1,93 +1,93 @@
-async function sendContact(ev){
+async function sendContact(ev) {
     ev.preventDefault();
-        const senderEmail = document
-          .getElementById('id_email').value || "Anon" ;
-        const subject_line =  document 
-          .getElementById('id_subject').value  || "Anon" ;
-        const discord_id = document
-          .getElementById('id_discordname').value || "Anon" ;
-        const senderMessage = document 
-          .getElementById('id_message').value;
+    const senderEmail = document
+        .getElementById('id_email').value || "Anon";
+    const subject_line = document
+        .getElementById('id_subject').value || "Anon";
+    const discord_id = document
+        .getElementById('id_discordname').value || "Anon";
+    const senderMessage = document
+        .getElementById('id_message').value;
 
-        
 
-    
-    
-        const webhookBody = {
-          embeds: [{
+
+
+
+    const webhookBody = {
+        embeds: [{
             title: 'Contact Form Submitted',
             fields: [
-              {  name: 'Discord', value: discord_id },
-              { name: 'Sender', value: senderEmail },
-              {name: 'subject',value: subject_line },
-              { name: 'Message', value: senderMessage }
+                { name: 'Discord', value: discord_id },
+                { name: 'Sender', value: senderEmail },
+                { name: 'subject', value: subject_line },
+                { name: 'Message', value: senderMessage }
             ]
-          }],
-        };
+        }],
+    };
 
-        const webhookUrl = 'https://discord.com/api/webhooks/984307685447041085/WqPPEVhAAwykcFxnvG3sYlhY_sAPll2C7xWklvQsUFwp6NTx8Hkg6hqO4VR8NnFx_JTL';
+    const webhookUrl = 'https://discord.com/api/webhooks/984307685447041085/WqPPEVhAAwykcFxnvG3sYlhY_sAPll2C7xWklvQsUFwp6NTx8Hkg6hqO4VR8NnFx_JTL';
 
-        const response = await fetch(webhookUrl, {
-          method: 'POST',
-          headers: {
+    const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
             'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(webhookBody),
-        });
+        },
+        body: JSON.stringify(webhookBody),
+    });
 
-        if (response.ok) {
-          alert('I have received your message!');
-        } else {
-          alert('There was an error! Try again later!');
-        }
+    if (response.ok) {
+        alert('I have received your message!');
+    } else {
+        alert('There was an error! Try again later!');
+    }
 }
 
 
 
 function myFunction() {
-  var x = document.getElementById("nav");
-  if (x.className === "") {
-    x.className += " nav-d";
-  } else {
-    x.className = "";
-  }
+    var x = document.getElementById("nav");
+    if (x.className === "") {
+        x.className += " nav-d";
+    } else {
+        x.className = "";
+    }
 
 
-var x = document.getElementById("sticky");
-  if (x.className === "sticky") {
-    x.className += " stickyd";
-  } else {
-    x.className = "sticky";
-  }
+    var x = document.getElementById("sticky");
+    if (x.className === "sticky") {
+        x.className += " stickyd";
+    } else {
+        x.className = "sticky";
+    }
 
-var x = document.getElementById("list-inline");
-  if (x.className === "list-inline") {
-    x.className += " list-inline-d";
-  } else {
-    x.className = "list-inline";
-  }
+    var x = document.getElementById("list-inline");
+    if (x.className === "list-inline") {
+        x.className += " list-inline-d";
+    } else {
+        x.className = "list-inline";
+    }
 
-var x = document.getElementsByClassName("stickA");
-
-    
-for (var i = 0; i < x.length; i++) { 
-    
-  if (x[i].className === "stickA") {
-    x[i].className += " stickA-d";
-  } else {
-    x[i].className = "stickA";
-  }
-}
+    var x = document.getElementsByClassName("stickA");
 
 
-var x = document.getElementsByClassName("medium-box");
-for (var i = 0; i < x.length; i++) { 
-    if (x[i].className === "medium-box") {
-    x[i].className += " medium-box-d";
-  } else {
-    x[i].className = "medium-box";
-  }
-}
+    for (var i = 0; i < x.length; i++) {
+
+        if (x[i].className === "stickA") {
+            x[i].className += " stickA-d";
+        } else {
+            x[i].className = "stickA";
+        }
+    }
+
+
+    var x = document.getElementsByClassName("medium-box");
+    for (var i = 0; i < x.length; i++) {
+        if (x[i].className === "medium-box") {
+            x[i].className += " medium-box-d";
+        } else {
+            x[i].className = "medium-box";
+        }
+    }
 
 }
 
@@ -95,8 +95,8 @@ for (var i = 0; i < x.length; i++) {
 //Header//
 
 class MyHeader extends HTMLElement {
-  connectedCallback(){
-    this.innerHTML = `
+    connectedCallback() {
+        this.innerHTML = `
  
  <div class="image-container">
     <img class="maid" src="maid_logo.png" alt="maid header">
@@ -122,24 +122,24 @@ class MyHeader extends HTMLElement {
       <li class="medium-box"><a class="stickA" href="contact.html#sticky">Contact Us</a></li>
       <li class="medium-box"><a class="stickA" href="faq.html#sticky">FAQ</a></li>
       <li class="medium-box"><a class="stickA" href="execs.html#sticky">Our Execs</a></li>
-	  
+      <li class="medium-box"><a class="stickA" href="sponsors.html#sticky">Sponsors</a></li>	  
     </ul>
   </nav>
     
 </div> 
 
 </header>
-       ` 
-  }
+       `
+    }
 }
 
-customElements.define('my-header',MyHeader)
+customElements.define('my-header', MyHeader)
 
 //Footer//
 
 class MyFooter extends HTMLElement {
-  connectedCallback(){
-    this.innerHTML = `
+    connectedCallback() {
+        this.innerHTML = `
       
   <footer>
  
@@ -187,19 +187,19 @@ class MyFooter extends HTMLElement {
 </div>
     
   </footer>
-       ` 
-  }
+       `
+    }
 }
 
-customElements.define('my-footer',MyFooter)
+customElements.define('my-footer', MyFooter)
 
 function autoScrollTitle() {
-  document.getElementById('title').scrollIntoView(false);
-  /** false means that it will scroll to the bottom of the element instead of top */
+    document.getElementById('title').scrollIntoView(false);
+    /** false means that it will scroll to the bottom of the element instead of top */
 }
+
 function autoScroll() {
-  window.setTimeout( function () { autoScrollTitle(); }, 2000 );
+    window.setTimeout(function() { autoScrollTitle(); }, 2000);
 }
 
 autoScroll();
-
