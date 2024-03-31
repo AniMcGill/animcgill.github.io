@@ -4,32 +4,32 @@ import NavSocial from './NavSocial.astro';
 import Logo from './Logo.astro';
 ---
 
-<div class='px-4 lg:px-16 border-b md:block hidden'>
-  <div class='h-20 flex items-center'>
+<div class='hidden border-b px-4 md:block lg:px-16'>
+  <div class='flex h-20 items-center'>
     <Logo />
-    <div class='flex items-center gap-x-2 h-full min-w-fit'>
+    <div class='flex h-full min-w-fit items-center gap-x-2'>
       <NavLink href='/#events'>Events</NavLink>
       <NavLink href='/sponsors'>Sponsors</NavLink>
       <NavLink href='/#newsletter'>Newsletter</NavLink>
       <NavLink href='/#execs'>Our Team</NavLink>
       <!-- <NavLink href='/faq'>FAQ</NavLink> -->
     </div>
-    <div class='flex-grow min-w-4'></div>
-    <div class='flex gap-x-1 lg:gap-x-2 items-center'>
+    <div class='min-w-4 flex-grow'></div>
+    <div class='flex items-center gap-x-1 lg:gap-x-2'>
       <NavSocial
-        class='bg-black hover:bg-accent w-8 h-8 lg:h-10 lg:w-10'
+        class='h-8 w-8 bg-black hover:bg-accent lg:h-10 lg:w-10'
         iconClass='h-6 w-6 lg:h-[30px] lg:w-[30px]'
         name='discord'
         href='https://discord.gg/gSAz2GC'
       />
       <NavSocial
-        class='bg-black hover:bg-accent w-8 h-8 lg:h-10 lg:w-10'
+        class='h-8 w-8 bg-black hover:bg-accent lg:h-10 lg:w-10'
         iconClass='h-5 w-5 lg:h-7 lg:w-7'
         name='instagram'
         href='https://www.instagram.com/mcgillanime/'
       />
       <NavSocial
-        class='bg-black hover:bg-accent w-8 h-8 lg:h-10 lg:w-10'
+        class='h-8 w-8 bg-black hover:bg-accent lg:h-10 lg:w-10'
         iconClass='h-7 w-7 lg:h-8 lg:w-8'
         name='facebook'
         href='https://www.facebook.com/McGillAnime/'
@@ -37,11 +37,11 @@ import Logo from './Logo.astro';
       <NavSocial
         name='linktree'
         iconClass='h-6 w-6 lg:h-[30px] lg:w-[30px]'
-        class='bg-black hover:bg-accent w-8 h-8 lg:h-10 lg:w-10'
+        class='h-8 w-8 bg-black hover:bg-accent lg:h-10 lg:w-10'
         href='https://linktr.ee/mcgillanimeclub'
       />
       <a
-        class='px-3 py-2 lg:px-5 lg:py-2 text-sm lg:text-base bg-accent rounded-md text-white font-medium ml-2 lg:ml-4 text-nowrap hover:bg-accent/90 transition duration-200'
+        class='ml-2 text-nowrap rounded-md bg-accent px-3 py-2 text-sm font-medium text-white transition duration-200 hover:bg-accent/90 lg:ml-4 lg:px-5 lg:py-2 lg:text-base'
         href='/contact'
       >
         Contact Us

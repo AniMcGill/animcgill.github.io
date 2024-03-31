@@ -30,12 +30,12 @@ import Logo from './Logo.astro';
   customElements.define('mobile-menu', MobileMenu);
 </script>
 
-<mobile-menu class='md:hidden block px-4 py-2'>
-  <div class='flex justify-between my-auto'>
+<mobile-menu class='block px-4 py-2 md:hidden'>
+  <div class='my-auto flex justify-between'>
     <Logo />
     <button
       id='open-button'
-      class='hover:text-accent transition duration-200 pr-2'
+      class='pr-2 transition duration-200 hover:text-accent'
     >
       <Menu size={32} />
     </button>
@@ -59,7 +59,7 @@ import Logo from './Logo.astro';
       <!-- <Separator /> -->
       <NavLink mobile href='/#contact-us'>Contact Us</NavLink>
       <Separator />
-      <div class='flex gap-2 items-center justify-center py-2'>
+      <div class='flex items-center justify-center gap-2 py-2'>
         <NavSocial
           name='discord'
           iconClass='h-7 w-7'

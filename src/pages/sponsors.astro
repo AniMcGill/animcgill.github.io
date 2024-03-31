@@ -6,23 +6,23 @@ import MembershipCard from '@/components/astro/MembershipCard.astro';
 ---
 
 <Layout title='Sponsors'>
-  <div class='px-2 pb-2 sm:px-4 py-8 md:p-12'>
-    <h1 class='text-2xl sm:text-5xl font-bold w-fit mx-auto text-center'>
+  <div class='px-2 py-8 pb-2 sm:px-4 md:p-12'>
+    <h1 class='mx-auto w-fit text-center text-2xl font-bold sm:text-5xl'>
       Thank you to our sponsors!
     </h1>
     <div
-      class='flex flex-col items-center sm:flex-row sm:items-start gap-x-8 mx-auto justify-between px-8 max-w-2xl pb-24'
+      class='mx-auto flex max-w-2xl flex-col items-center justify-between gap-x-8 px-8 pb-24 sm:flex-row sm:items-start'
     >
-      <div class='max-w-sm pt-6 sm:pt-24 flex flex-col text-center'>
-        <div class='sm:text-xl leading-snug font-semibold text-gray-600'>
+      <div class='flex max-w-sm flex-col pt-6 text-center sm:pt-24'>
+        <div class='font-semibold leading-snug text-gray-600 sm:text-xl'>
           Membership card holders receive the following benefits...
         </div>
       </div>
-      <MembershipCard class='w-36 mt-4 sm:mt-8 sm:mr-auto' />
+      <MembershipCard class='mt-4 w-36 sm:mr-auto sm:mt-8' />
     </div>
     <div class='py-20 sm:py-4'></div>
     <div
-      class='flex flex-col items-center gap-y-4 sm:items-stretch sm:flex-row justify-evenly gap-x-2 max-w-4xl mx-auto'
+      class='mx-auto flex max-w-4xl flex-col items-center justify-evenly gap-x-2 gap-y-4 sm:flex-row sm:items-stretch'
     >
       <SponsorCard
         src='/assets/sponsors/otaku-manga-lounge.jpg'
@@ -45,7 +45,7 @@ import MembershipCard from '@/components/astro/MembershipCard.astro';
     </div>
     <div class='py-8'></div>
 
-    <div class='flex flex-wrap gap-8 justify-center items-center'>
+    <div class='flex flex-wrap items-center justify-center gap-8'>
       <SponsorLogo
         href='https://store.udonentertainment.com/'
         src='/assets/sponsors/udon.png'

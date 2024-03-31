@@ -7,8 +7,8 @@ interface Props {
 const { class: className, question } = Astro.props;
 ---
 
-<details class:list={['border p-2 rounded-md cursor-pointer', className]}>
-  <summary class='text-xl font-semibold list-none'
+<details class:list={['cursor-pointer rounded-md border p-2', className]}>
+  <summary class='list-none text-xl font-semibold'
     >🌸&nbsp;&nbsp;{question}</summary
   >
   <div class='py-1'></div>

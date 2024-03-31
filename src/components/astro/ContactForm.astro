@@ -51,8 +51,8 @@ import FormInput from './FormInput.astro';
   });
 </script>
 
-<form class='flex flex-col gap-y-2 flex-grow'>
-  <div class='flex gap-x-2 w-full'>
+<form class='flex flex-grow flex-col gap-y-2'>
+  <div class='flex w-full gap-x-2'>
     <FormInput
       class='w-1/2'
       type='text'
@@ -69,12 +69,12 @@ import FormInput from './FormInput.astro';
   </div>
   <FormInput type='text' placeholder='Subject' name='subject' required />
   <textarea
-    class='border border-accent text-accent rounded-md placeholder-accent/70 px-4 py-2 font-medium focus:outline-none focus:outline-accent/50 focus:outline-offset-0 text-sm lg:text-base'
+    class='rounded-md border border-accent px-4 py-2 text-sm font-medium text-accent placeholder-accent/70 focus:outline-none focus:outline-offset-0 focus:outline-accent/50 lg:text-base'
     rows='6'
     required
     placeholder='Message'></textarea>
   <button
-    class='px-5 py-2 bg-accent rounded-md text-white font-medium hover:bg-accent/90 transition duration-200'
+    class='rounded-md bg-accent px-5 py-2 font-medium text-white transition duration-200 hover:bg-accent/90'
   >
     Send Message
   </button>
