@@ -1,4 +1,5 @@
 # McGill Student's Anime Club (MSAC) Website
+(old)
 
 Link to site: https://msac.ssmu.ca/
 
