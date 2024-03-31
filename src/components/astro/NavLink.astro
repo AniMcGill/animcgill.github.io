@@ -1,0 +1,44 @@
+---
+interface Props {
+  href: string;
+  mobile?: boolean;
+}
+
+const { href, mobile } = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={[
+    'text-accent font-semibold h-full px-1 lg:px-2 xl:px-4 flex items-center',
+    mobile ? 'py-1' : 'hover-underline-animation text-sm lg:text-base',
+  ]}
+>
+  <slot />
+</a>
+
+<style>
+  .hover-underline-animation {
+    position: relative;
+    color: theme('colors.accent');
+  }
+
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    transform: scaleX(0);
+    height: 3px;
+    border-radius: 8px;
+    bottom: 0;
+    left: 30%;
+    background-color: theme('colors.accent');
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: center;
+  }
+</style>

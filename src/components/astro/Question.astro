@@ -1,0 +1,16 @@
+---
+interface Props {
+  question: string;
+  class?: string;
+}
+
+const { class: className, question } = Astro.props;
+---
+
+<details class:list={['border p-2 rounded-md cursor-pointer', className]}>
+  <summary class='text-xl font-semibold list-none'
+    >🌸&nbsp;&nbsp;{question}</summary
+  >
+  <div class='py-1'></div>
+  <slot />
+</details>

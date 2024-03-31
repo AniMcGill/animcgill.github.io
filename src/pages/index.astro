@@ -1,0 +1,310 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import MembershipCard from '@/components/astro/MembershipCard.astro';
+import ExecCarousel from '@/components/preact/ExecCarousel';
+import GetInvolvedCard from '@/components/astro/GetInvolvedCard.astro';
+import ButtonLink from '@/components/astro/ButtonLink.astro';
+import ContactForm from '@/components/astro/ContactForm.astro';
+import { Icon } from 'astro-icon/components';
+
+const EXECS = [
+  {
+    name: 'Bassem',
+    position: 'President',
+    major: 'IDS & Biology',
+    year: 'U4',
+    desc: 'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+    img: '/assets/execs/bassem.jpg',
+  },
+  {
+    name: 'Pasha',
+    position: 'Senior VP',
+    major: 'Computer Engineering',
+    year: 'U3',
+    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+    img: '/assets/execs/pasha.jpg',
+  },
+  {
+    name: 'Amandine',
+    position: 'VP Equity',
+    major: 'Computer Science & Biology',
+    year: 'U4',
+    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+    img: '/assets/execs/amandine.jpg',
+  },
+  {
+    name: 'Liz',
+    position: 'VP Comms',
+    major: 'Cell Biology',
+    year: 'U3',
+    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+    img: '/assets/execs/liz.jpg',
+  },
+  {
+    name: 'Tudor',
+    position: 'VP Finance',
+    major: 'Computer Science',
+    year: 'U3',
+    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+    img: '/assets/execs/tudor.jpg',
+  },
+  {
+    name: 'Wayne',
+    position: 'VP Finance',
+    major: 'Food Science',
+    year: 'U3',
+    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+    img: '/assets/execs/wayne.jpg',
+  },
+  {
+    name: 'Anh-Kim',
+    position: 'VP Internal',
+    major: 'Marketing',
+    year: 'U3',
+    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+    img: '/assets/execs/anhkim.jpg',
+  },
+  {
+    name: 'Armaan',
+    position: 'VP External',
+    major: 'Linguistics',
+    year: 'U3',
+    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+    img: '/assets/execs/armaan.jpg',
+  },
+  {
+    name: 'Alex',
+    position: 'VP Art',
+    major: 'Anatomy & Cell Biology',
+    year: 'U2',
+    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+    img: '/assets/execs/alex.jpg',
+  },
+  {
+    name: 'Oliver',
+    position: 'VP Game Dev',
+    major: 'Mechanical Engineering',
+    year: 'U3',
+    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+    img: '/assets/execs/oliver.jpg',
+  },
+  {
+    name: 'Yong',
+    position: 'VP Special Events',
+    major: 'Computer Engineering',
+    year: 'U4',
+    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+    img: '/assets/execs/yong.jpg',
+  },
+];
+---
+
+<Layout>
+  <!-- Hero -->
+  <div class='bg-black text-white pt-8 pb-4 md:pb-8 xl:pb-80'>
+    <div class='flex flex-col xl:flex-row md:px-8 lg:pl-16'>
+      <div class='xl:w-1/3 md:mt-12 xl:mt-28'>
+        <h1
+          class='text-center md:text-left font-bold text-3xl sm:text-4xl leading-snug md:text-5xl md:leading-tight'
+        >
+          Dive into the vibrant world of anime and manga with MSAC
+        </h1>
+        <div class='py-3 lg:py-4'></div>
+        <a
+          class='mx-auto md:mx-0 bg-white text-accent font-bold w-fit px-3 py-1 sm:px-4 sm:py-2 rounded-md flex items-center gap-x-2 text-lg sm:text-xl border border-accent hover:bg-accent hover:text-white transition duration-200 z-50 relative'
+          href='https://discord.gg/gSAz2GC'
+        >
+          <Icon name='discord' class='w-8 h-8 sm:w-9 sm:h-9' />
+          <span>Discord</span>
+        </a>
+      </div>
+      <img
+        src='/assets/usami.svg'
+        class='mt-4 md:mt-0 xl:w-2/3 xl:max-w-5xl z-50'
+      />
+    </div>
+    <div class='flex flex-col md:flex-row p-6 lg:p-0 mt-8 md:mt-16 xl:mt-0'>
+      <div
+        class='relative w-2/3 lg:max-w-[576px] xl:max-w-[700px] hidden lg:block'
+      >
+        <svg
+          class='absolute -top-20 xl:-top-40 w-3/5'
+          viewBox='0 0 467 704'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <path
+            d='M465 58.5548L-28.5481 2.65479V701.699L465 627.214V58.5548Z'
+            stroke='white'
+            stroke-width='3'></path>
+        </svg>
+        <img
+          src='/assets/execs.png'
+          class='absolute z-10 md:left-8 lg:left-16 xl:-top-16'
+        />
+      </div>
+      <div class='lg:w-2/5 lg:ml-24 xl:ml-28'>
+        <h2 class='font-bold text-4xl mb-8'>About Us</h2>
+        <img src='/assets/execs.png' class='lg:hidden mb-4 lg:mb-0' />
+        <div class='text-xl font-medium'>
+          The McGill Students' Anime Club (MSAC) is a Students’ Society of
+          McGill University (SSMU) club built to bring McGill weebs from all
+          walks of life together.
+          <br />
+          <br />
+          During the semester, MSAC hosts a myriad of events and activities to promote
+          anime culture in McGill and foster an active community.
+        </div>
+        <a
+          class='bg-white text-accent w-fit px-6 py-3 rounded-md text-xl block mt-10 border-accent border font-medium hover:bg-accent hover:text-white transition duration-200'
+          href='/#execs'
+        >
+          Our Team
+        </a>
+        <div class='lg:py-10 xl:py-0'></div>
+      </div>
+    </div>
+  </div>
+  <!-- Events -->
+  <div id='events' class='bg-background-light px-8 lg:px-16 py-12 lg:py-16'>
+    <div class='text-center font-bold text-4xl lg:text-5xl'>Get involved!</div>
+    <div class='py-4 lg:py-12'></div>
+    <div class='flex flex-col md:flex-row gap-x-12'>
+      <GetInvolvedCard
+        title='Special Events'
+        src='/assets/special_events.png'
+        description='We host our Cosplay Event in Fall and our Maid Café in Winter'
+        href=''
+      />
+      <GetInvolvedCard
+        title='Weekly Events'
+        src='/assets/weekly_events.png'
+        description='Come to our events every Monday (7-9PM) and Friday (6-8PM)'
+        href=''
+      />
+      <GetInvolvedCard
+        title='Join our Discord'
+        src='/assets/join_discord.png'
+        description='To engage and chat with our active online community'
+        href='https://discord.gg/gSAz2GC'
+        actionText='Join now'
+      />
+    </div>
+  </div>
+  <!-- Sponsors -->
+  <div
+    id='sponsors'
+    class='bg-background flex flex-col md:flex-row gap-x-16 relative mx-auto md:justify-evenly px-8 md:items-start lg:items-stretch md:h-[512px] lg:h-[600px]'
+  >
+    <div class='absolute bg-background-light h-16 w-full top-0 hidden md:block'>
+    </div>
+    <div class='md:max-w-xs lg:max-w-lg pt-8 md:pt-32 flex flex-col'>
+      <h2
+        class='font-bold text-center md:text-left text-3xl md:text-4xl lg:text-5xl md:leading-tight lg:leading-snug'
+      >
+        Sponsors and Membership Card
+      </h2>
+      <div class='py-2'></div>
+      <div class='text-xl md:text-2xl lg:text-3xl lg:leading-snug'>
+        Discover our partners, sponsors, and how you can save with our
+        Membership Card!
+      </div>
+      <div class='flex-grow py-3'></div>
+      <div class='hidden md:block'>
+        <ButtonLink href='/sponsors'>Learn More</ButtonLink>
+      </div>
+      <MembershipCard class='w-36 mx-auto md:hidden' />
+      <div class='block md:hidden mt-[272px]'>
+        <ButtonLink href='/sponsors'>Learn More</ButtonLink>
+      </div>
+      <div class='py-2 lg:py-6'></div>
+    </div>
+    <MembershipCard
+      class='hidden md:block md:w-72 lg:w-96 mt-8 md:mr-16 lg:mr-24'
+    />
+  </div>
+  <!--Newsletter callout-->
+  <div
+    id='newsletter'
+    class='flex flex-col items-center justify-center max-w-4xl pt-8 md:pt-20 mx-auto px-4 sm:px-8'
+  >
+    <h3 class='text-3xl md:text-4xl font-bold text-center'>
+      Sign up to Usami's Newsletter
+    </h3>
+    <div class='py-4'></div>
+    <div class='text-xl md:text-2xl text-center'>
+      Get announcements and reminders about our events, hear the latest news
+      about our partnerships, get to know the executive team, and more!
+    </div>
+    <div class='py-12 md:py-6'></div>
+    <div class='relative'>
+      <img src='assets/usami_newsletter.svg' class='w-64 md:w-80' />
+      <div class='absolute -top-16 -right-12 md:top-0 md:-right-40'>
+        <a
+          class='relative block'
+          id='newsletter-button'
+          href='http://eepurl.com/9cwIf'
+        >
+          <div
+            class='border border-accent text-accent bg-white px-6 md:px-10 py-3 font-medium w-fit rounded-md text-xl'
+          >
+            Sign up
+          </div>
+          <svg
+            width='40'
+            height='40'
+            viewBox='0 0 40 40'
+            fill='white'
+            xmlns='http://www.w3.org/2000/svg'
+            class='absolute -bottom-[38px] left-10'
+          >
+            <path
+              d='M8.61771 0.930275C14.1548 5.57471 14.0071 21.0908 0.544434 39.4942C18.0238 26.6434 31.8453 17.429 38.5718 0.785645'
+              stroke='#CE3703'></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--Execs-->
+  <div class='sm:px-8 lg:px-16 pt-8 lg:py-16' id='execs'>
+    <div class='text-center font-bold text-3xl lg:text-4xl pt-8'>Our Team</div>
+    <div class='py-3'></div>
+    <div class='py-0.5 lg:py-1 bg-background w-24 mx-auto'></div>
+    <div class='py-2 lg:py-6'></div>
+    <div
+      class='flex justify-center sm:border sm:shadow-md sm:rounded-xl max-w-5xl mx-auto'
+    >
+      <ExecCarousel execs={EXECS} client:load />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  #newsletter-button {
+    pointer-events: none;
+  }
+  #newsletter-button > * {
+    pointer-events: auto;
+  }
+  #newsletter-button:hover > div {
+    background-color: theme('colors.accent' / 0.8);
+    color: white;
+    transition: background-color, color;
+    transition-duration: 0.2s;
+  }
+  #newsletter-button:hover > div:hover {
+    background-color: theme('colors.accent' / 0.8);
+    color: white;
+    transition: background-color, color;
+    transition-duration: 0.2s;
+  }
+  #newsletter-button:hover > svg {
+    fill: theme('colors.accent' / 0.8);
+    transition: fill 0.2s;
+  }
+  #newsletter-button:hover > svg:hover {
+    fill: theme('colors.accent' / 0.8);
+    transition: fill 0.2s;
+  }
+</style>

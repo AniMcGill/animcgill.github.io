@@ -1,0 +1,22 @@
+---
+interface Props {
+  src: string;
+  href: string;
+  description: string;
+  alt?: string;
+}
+
+const { src, href, alt, description } = Astro.props;
+---
+
+<a
+  href={href}
+  target='_blank'
+  class='flex flex-col items-center p-6 shadow-md w-64 rounded-xl border hover:-translate-y-3 hover:shadow-xl transition duration-300'
+>
+  <div class='flex-grow flex items-center'>
+    <img src={src} alt={alt} class='rounded-xl' />
+  </div>
+  <div class='py-2'></div>
+  <div class='text-center font-medium'>{description}</div>
+</a>

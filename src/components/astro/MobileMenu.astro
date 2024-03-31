@@ -1,0 +1,91 @@
+---
+import { Menu } from 'lucide-preact';
+import NavLink from './NavLink.astro';
+import NavSocial from './NavSocial.astro';
+import Separator from './Separator.astro';
+import { Icon } from 'astro-icon/components';
+import Logo from './Logo.astro';
+---
+
+<script>
+  class MobileMenu extends HTMLElement {
+    constructor() {
+      super();
+      let open = false;
+
+      const button = this.querySelector('#open-button');
+      const content = this.querySelector('#menu-content') as HTMLDivElement;
+
+      if (!button || !content) {
+        throw new Error('Elements not found');
+      }
+
+      button.addEventListener('click', () => {
+        open = !open;
+        content.style.height = open ? '288px' : '0';
+      });
+    }
+  }
+
+  customElements.define('mobile-menu', MobileMenu);
+</script>
+
+<mobile-menu class='md:hidden block px-4 py-2'>
+  <div class='flex justify-between my-auto'>
+    <Logo />
+    <button
+      id='open-button'
+      class='hover:text-accent transition duration-200 pr-2'
+    >
+      <Menu size={32} />
+    </button>
+  </div>
+  <div
+    class='overflow-hidden transition-all'
+    id='menu-content'
+    style={{ height: 0 }}
+  >
+    <div class='px-2'>
+      <Separator />
+      <NavLink mobile href='/#events'>Events</NavLink>
+      <Separator />
+      <NavLink mobile href='/sponsors'>Sponsors</NavLink>
+      <Separator />
+      <NavLink mobile href='/#newsletter'>Newsletter</NavLink>
+      <Separator />
+      <NavLink mobile href='/#execs'>Our Team</NavLink>
+      <Separator />
+      <!-- <NavLink mobile href='/faq'>FAQ</NavLink> -->
+      <!-- <Separator /> -->
+      <NavLink mobile href='/#contact-us'>Contact Us</NavLink>
+      <Separator />
+      <div class='flex gap-2 items-center justify-center py-2'>
+        <NavSocial
+          name='discord'
+          iconClass='h-7 w-7'
+          class='bg-black hover:bg-accent'
+          href='https://discord.gg/gSAz2GC'
+        />
+        <NavSocial
+          name='instagram'
+          iconClass='h-7 w-7'
+          class='bg-black hover:bg-accent'
+          href='https://www.instagram.com/mcgillanime/'
+        />
+        <NavSocial
+          name='facebook'
+          iconClass='h-8 w-8'
+          class='bg-black hover:bg-accent'
+          href='https://www.facebook.com/McGillAnime/'
+        />
+        <NavSocial
+          name='linktree'
+          iconClass='h-7 w-7'
+          class='bg-black hover:bg-accent'
+          href='https://linktr.ee/mcgillanimeclub'
+        />
+      </div>
+      <Separator />
+    </div>
+  </div>
+</mobile-menu>

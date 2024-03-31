@@ -1,0 +1,81 @@
+---
+import FormInput from './FormInput.astro';
+---
+
+<script>
+  async function handleSubmit(form: HTMLFormElement) {
+    const formData = new FormData(form);
+
+    const webhookBody = {
+      embeds: [
+        {
+          title: 'Contact Form Submitted',
+          fields: [
+            { name: 'Discord', value: formData.get('discord') ?? 'Anonymous' },
+            { name: 'Sender', value: formData.get('name') ?? 'Anonymous' },
+            { name: 'Subject', value: formData.get('subject') ?? 'No subject' },
+            { name: 'Message', value: formData.get('message') ?? 'No message' },
+          ],
+        },
+      ],
+    };
+
+    const webhookUrl = atob(
+      'aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTA2NjM4ODkzMzE3MDE3MTkyNC9vR2JqeWVnTFU0VW1nRF9VbHkybEJrV2tDbGdFV1hJUldXek9KclhQaVJVLVRzclF1SVVRWXpUSy0xRGNkNEJ2UWx3Uw=='
+    );
+
+    const response = await fetch(webhookUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(webhookBody),
+    });
+
+    if (response.ok) {
+      alert('I have received your message!');
+    } else {
+      alert('There was an error! Try again later!');
+    }
+  }
+
+  const form = document.getElementById('contact-form');
+
+  if (!form) {
+    throw new Error('Form not found');
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    handleSubmit(e.target as HTMLFormElement);
+  });
+</script>
+
+<form class='flex flex-col gap-y-2 flex-grow'>
+  <div class='flex gap-x-2 w-full'>
+    <FormInput
+      class='w-1/2'
+      type='text'
+      placeholder='Name'
+      name='name'
+      required
+    />
+    <FormInput
+      class='w-1/2'
+      type='text'
+      placeholder='Discord username (optional)'
+      name='discord'
+    />
+  </div>
+  <FormInput type='text' placeholder='Subject' name='subject' required />
+  <textarea
+    class='border border-accent text-accent rounded-md placeholder-accent/70 px-4 py-2 font-medium focus:outline-none focus:outline-accent/50 focus:outline-offset-0 text-sm lg:text-base'
+    rows='6'
+    required
+    placeholder='Message'></textarea>
+  <button
+    class='px-5 py-2 bg-accent rounded-md text-white font-medium hover:bg-accent/90 transition duration-200'
+  >
+    Send Message
+  </button>
+</form>

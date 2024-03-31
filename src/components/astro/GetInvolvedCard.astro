@@ -1,0 +1,41 @@
+---
+import ButtonLink from './ButtonLink.astro';
+
+interface Props {
+  href?: string;
+  src: string;
+  title: string;
+  description: string;
+  actionText?: string;
+  target?: string;
+}
+
+const {
+  href,
+  src,
+  title,
+  description,
+  actionText = 'Learn more',
+  target,
+} = Astro.props;
+---
+
+<div class='flex flex-col items-center'>
+  <img src={src} height={440} />
+  <div class='py-3 lg:py-6'></div>
+  <div class='px-4 text-center'>
+    <h3 class='font-bold text-2xl lg:text-4xl'>{title}</h3>
+    <div class='py-1 lg:py-4'></div>
+    <div class='text-xl lg:text-2xl'>
+      {description}
+    </div>
+  </div>
+  <div class='flex-grow mb-8'></div>
+  {
+    href && (
+      <ButtonLink href={href} target={target}>
+        {actionText}
+      </ButtonLink>
+    )
+  }
+</div>

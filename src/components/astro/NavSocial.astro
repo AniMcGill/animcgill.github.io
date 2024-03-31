@@ -1,0 +1,23 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  name: string;
+  href: string;
+  size?: number;
+  class?: string;
+  iconClass?: string;
+}
+
+const { name, size, href, class: className, iconClass } = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={[
+    'text-white rounded-full h-10 w-10 flex items-center justify-center transition duration-200',
+    className,
+  ]}
+>
+  <Icon name={name} class={iconClass} />
+</a>
