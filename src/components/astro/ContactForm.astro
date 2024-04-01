@@ -3,6 +3,16 @@ import FormInput from './FormInput.astro';
 ---
 
 <script>
+  function rot13inv(s: string) {
+    return s.replace(
+      /[A-Z]/gi,
+      (c) =>
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'[
+          'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'.indexOf(c)
+        ]
+    );
+  }
+
   async function handleSubmit(form: HTMLFormElement) {
     const formData = new FormData(form);
 
@@ -20,8 +30,10 @@ import FormInput from './FormInput.astro';
       ],
     };
 
-    const webhookUrl = atob(
-      'aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTA2NjM4ODkzMzE3MDE3MTkyNC9vR2JqeWVnTFU0VW1nRF9VbHkybEJrV2tDbGdFV1hJUldXek9KclhQaVJVLVRzclF1SVVRWXpUSy0xRGNkNEJ2UWx3Uw=='
+    const webhookUrl = rot13inv(
+      atob(
+        'dWdnY2Y6Ly9xdmZwYmVxLnBiei9uY3YvanJvdWJieGYvMTIyNDIxNzIxMjYyMjA3Nzk1Mi9zMGdLaEpkR2dlZHVJSmI1cGpyMzR4ckFyZjl2SURfUjZLTGYxZUo1UlBMaXB3WThQd1lDUHhJamRQSjNQVGtROC1Rdw=='
+      )
     );
 
     const response = await fetch(webhookUrl, {
@@ -51,7 +63,7 @@ import FormInput from './FormInput.astro';
   });
 </script>
 
-<form class='flex flex-grow flex-col gap-y-2'>
+<form class='flex flex-grow flex-col gap-y-2' id='contact-form'>
   <div class='flex w-full gap-x-2'>
     <FormInput
       class='w-1/2'
@@ -72,7 +84,8 @@ import FormInput from './FormInput.astro';
     class='rounded-md border border-accent px-4 py-2 text-sm font-medium text-accent placeholder-accent/70 focus:outline-none focus:outline-offset-0 focus:outline-accent/50 lg:text-base'
     rows='6'
     required
-    placeholder='Message'></textarea>
+    placeholder='Message'
+    name='message'></textarea>
   <button
     class='rounded-md bg-accent px-5 py-2 font-medium text-white transition duration-200 hover:bg-accent/90'
   >
