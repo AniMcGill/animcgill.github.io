@@ -3,6 +3,8 @@ import type { ScheduledEvent } from '@/types/event';
 import { CalendarClock, MapPin } from 'lucide-preact';
 import { useEffect, useState } from 'preact/hooks';
 import Spinner from './Spinner';
+import Markdown from 'markdown-to-jsx';
+import { Link } from './Link';
 
 const EventInfo = () => {
   const urlSearchParams = new URLSearchParams(window.location.search);
@@ -52,8 +54,8 @@ const EventInfo = () => {
       <img src={event.imageUrl} />
       <div className='py-2' />
 
-      <h3 class='text-2xl font-bold'>{event.name}</h3>
-      <div className='py-0.5' />
+      <h3 class='text-4xl font-bold'>{event.name}</h3>
+      <div className='py-1.5' />
 
       <div className='flex items-center gap-x-2 font-semibold text-gray-700'>
         <CalendarClock className='stroke-gray-500' size={24} />
@@ -64,11 +66,22 @@ const EventInfo = () => {
         <MapPin className='stroke-gray-500' size={24} />
         <div>{event.location}</div>
       </div>
-      <div class='py-2'></div>
+      <div class='py-4'></div>
 
-      <div class='line-clamp-5 overflow-hidden overflow-ellipsis text-gray-700'>
-        {event.description}
+      <div className='prose prose-h1:font-bold prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl text-gray-800'>
+        <Markdown
+          options={{
+            overrides: {
+              a: {
+                component: Link,
+              },
+            },
+          }}
+        >
+          {event.description}
+        </Markdown>
       </div>
+
       <div className='py-8' />
     </div>
   );

@@ -2,6 +2,7 @@ import { type ScheduledEvent, type EventStatus } from '@/types/event';
 import { CalendarClock, MapPin } from 'lucide-preact';
 import { formatEventDate } from '@/lib/time';
 import { clsx } from 'clsx';
+import Markdown from 'markdown-to-jsx';
 
 type Props = {
   event: ScheduledEvent;
@@ -41,7 +42,20 @@ const EventCard = ({ event, status }: Props) => {
         </div>
         <div class='py-1'></div>
         <div class='line-clamp-4 overflow-hidden overflow-ellipsis text-sm text-gray-700'>
-          {event.description}
+          <Markdown
+            options={{
+              overrides: {
+                a: {
+                  component: 'span',
+                  props: {
+                    class: 'text-gray-800 underline',
+                  },
+                },
+              },
+            }}
+          >
+            {event.description}
+          </Markdown>
         </div>
       </div>
     </a>

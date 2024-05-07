@@ -6,6 +6,10 @@ interface Props {
 const { href } = Astro.props;
 ---
 
-<a class='text-grey-800 underline duration-200 hover:text-rose-400' href={href}>
+<a
+  class='text-grey-800 underline duration-200 hover:text-rose-400'
+  href={href}
+  target='_blank'
+>
   <slot />
 </a>
