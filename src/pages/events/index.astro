@@ -3,6 +3,7 @@ import Layout from '@/layouts/Layout.astro';
 import EventCard from '@/components/astro/EventCard.astro';
 import EventGroup from '@/components/astro/EventGroup.astro';
 import type { ScheduledEvent } from '@/types/event';
+import Events from '@/components/preact/Events';
 
 // TODO: Handle markdown
 
@@ -60,41 +61,6 @@ const PAST_EVENTS: ScheduledEvent[] = [];
 
 <Layout title='Events'>
   <div class='flex flex-col items-center px-2 py-8 pb-2 sm:px-4 md:p-12'>
-    {
-      LIVE_EVENTS.length > 0 && (
-        <>
-          <h2 class='mx-auto text-2xl font-bold lg:text-4xl'>Happening now!</h2>
-          <div class='py-1 lg:py-2' />
-          <div class='mx-auto w-16 bg-background py-0.5 lg:w-24 lg:py-1' />
-          <div class='py-2 lg:py-4' />
-          <EventGroup events={LIVE_EVENTS} status='live' />
-          <div class='py-6' />
-        </>
-      )
-    }
-
-    <h2 class='text-2xl font-bold lg:text-3xl'>Upcoming events</h2>
-    <div class='py-1 lg:py-2'></div>
-    <div class='mx-auto w-16 bg-background py-0.5 lg:w-24 lg:py-1'></div>
-    <div class='py-2 lg:py-4'></div>
-    {
-      UPCOMING_EVENTS.length > 0 ? (
-        <EventGroup events={UPCOMING_EVENTS} status='upcoming' />
-      ) : (
-        <div class='text-2xl text-gray-700'>No events happening soon :(</div>
-      )
-    }
-    <div class='py-6'></div>
-    <h2 class='text-2xl font-semibold text-gray-700 lg:text-3xl'>
-      Past events
-    </h2>
-    <div class='py-2 lg:py-4'></div>
-    {
-      PAST_EVENTS.length > 0 ? (
-        <EventGroup events={PAST_EVENTS} status='past' />
-      ) : (
-        <div class='text-xl text-gray-700 lg:text-2xl'>Nothing found.</div>
-      )
-    }
+    <Events client:load />
   </div>
 </Layout>

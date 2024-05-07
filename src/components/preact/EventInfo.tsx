@@ -1,29 +1,8 @@
+import { formatEventDate } from '@/lib/time';
 import type { ScheduledEvent } from '@/types/event';
-import { format } from 'date-fns-tz';
+import { CalendarClock, MapPin } from 'lucide-preact';
 import { useEffect, useState } from 'preact/hooks';
 import Spinner from './Spinner';
-import { CalendarClock, MapPin } from 'lucide-preact';
-import { formatEventDate } from '@/lib/time';
-
-const getEvent = async () => {
-  return {
-    id: '1',
-    name: 'Spring 2024 Anime Screening',
-    description:
-      'We are partnering with the wonderful Anime North Compass to offer our members a 10$ discount on tickets! We will also be covering the 4.49$ Eventbrite fees for you. Membership card owners can pre-order their ticket using this link🧭',
-    location: 'Toronto Congress Centre',
-    startTime: 1716523200,
-    endTime: 1716781500,
-    imageUrl:
-      'https://cdn.discordapp.com/guild-events/1213185245646688347/24672f25f4c3cebb19170df538c3baa1?size=1024',
-  };
-};
-
-const formatDate = (time: number) => {
-  return format(new Date(time * 1000), 'PPp', {
-    timeZone: 'America/Montreal',
-  });
-};
 
 const EventInfo = () => {
   const urlSearchParams = new URLSearchParams(window.location.search);
@@ -38,22 +17,38 @@ const EventInfo = () => {
     );
   }
 
-  const [event, setEvent] = useState<ScheduledEvent | undefined>();
+  const [event, setEvent] = useState<ScheduledEvent | undefined | null>(
+    undefined
+  );
   useEffect(() => {
     setEvent(undefined);
-    getEvent().then(setEvent);
+    fetch('http://localhost:8000/events/' + id)
+      .then((res) => res.json())
+      .then(setEvent)
+      .catch((e) => {
+        console.error(e);
+        setEvent(null);
+      });
   }, [id]);
 
-  if (!event) {
+  if (event === undefined) {
     return (
-      <div class='flex h-96 items-center justify-center'>
+      <div class='mt-16 flex h-screen justify-center'>
         <Spinner />
       </div>
     );
   }
 
+  if (event === null) {
+    return (
+      <div className='mt-16 flex min-h-96 justify-center text-2xl text-red-700'>
+        An error occured when trying to fetch event info :(
+      </div>
+    );
+  }
+
   return (
-    <div class='mx-auto flex max-w-2xl flex-col px-2 py-8 pb-2 sm:px-4 md:p-12'>
+    <div class='mx-auto flex min-h-96 max-w-2xl flex-col px-2 py-8 pb-2 sm:px-4 md:p-12'>
       <img src={event.imageUrl} />
       <div className='py-2' />
 
@@ -62,10 +57,7 @@ const EventInfo = () => {
 
       <div className='flex items-center gap-x-2 font-semibold text-gray-700'>
         <CalendarClock className='stroke-gray-500' size={24} />
-        <div>
-          {formatEventDate(event.startTime, event.endTime)}
-          {/* {formatDate(event.startTime)} - {formatDate(event.endTime)} */}
-        </div>
+        <div>{formatEventDate(event.startTime, event.endTime)}</div>
       </div>
       <div class='py-0.5'></div>
       <div className='text flex items-center gap-x-2 font-semibold text-gray-700'>
