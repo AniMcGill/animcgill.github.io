@@ -15,5 +15,5 @@ export default {
       sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
