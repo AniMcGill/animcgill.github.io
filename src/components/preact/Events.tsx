@@ -30,7 +30,7 @@ const Events = () => {
   );
 
   useEffect(() => {
-    fetch('http://localhost:8000/events')
+    fetch(`${import.meta.env.PUBLIC_API_URL}/events`)
       .then((res) => res.json())
       .then(setEventData)
       .catch((e) => {

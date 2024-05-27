@@ -4,12 +4,11 @@ import { Icon } from 'astro-icon/components';
 interface Props {
   name: string;
   href: string;
-  size?: number;
   class?: string;
   iconClass?: string;
 }
 
-const { name, size, href, class: className, iconClass } = Astro.props;
+const { name, href, class: className, iconClass } = Astro.props;
 ---
 
 <a
