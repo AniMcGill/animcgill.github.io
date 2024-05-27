@@ -24,7 +24,7 @@ const EventInfo = () => {
   );
   useEffect(() => {
     setEvent(undefined);
-    fetch(`${import.meta.env.PUBLIC_API_URL}/events/${id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/events/${id}`)
       .then((res) => res.json())
       .then(setEvent)
       .catch((e) => {
@@ -68,7 +68,7 @@ const EventInfo = () => {
       </div>
       <div class='py-4'></div>
 
-      <div className='prose prose-h1:font-bold prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl text-gray-800'>
+      <div className='prose text-gray-800 prose-h1:text-3xl prose-h1:font-bold prose-h2:text-2xl prose-h3:text-xl'>
         <Markdown
           options={{
             overrides: {
