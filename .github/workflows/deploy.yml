@@ -16,8 +16,7 @@ permissions:
 
 jobs:
   build:
-    env:
-      VITE_API_URL: ${{ secrets.VITE_API_URL }}
+    environment: github-pages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git

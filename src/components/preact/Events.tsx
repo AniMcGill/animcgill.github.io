@@ -30,7 +30,7 @@ const Events = () => {
   );
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/events`)
+    fetch(`${import.meta.env.PUBLIC_API_URL}/events`)
       .then((res) => res.json())
       .then(setEventData)
       .catch((e) => {
