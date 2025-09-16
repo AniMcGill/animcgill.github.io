@@ -5,97 +5,6 @@ import ExecCarousel from '@/components/preact/ExecCarousel';
 import GetInvolvedCard from '@/components/astro/GetInvolvedCard.astro';
 import ButtonLink from '@/components/astro/ButtonLink.astro';
 import { Icon } from 'astro-icon/components';
-
-const EXECS = [
-  {
-    name: 'Armaan',
-    position: 'President',
-    major: 'Linguistics',
-    year: 'U4',
-    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
-    img: '/assets/execs/armaan.jpg',
-  },
-  {
-    name: 'Wayne',
-    position: 'VP Events',
-    major: 'Food Science',
-    year: 'U4',
-    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
-    img: '/assets/execs/wayne.jpg',
-  },
-  {
-    name: 'Anh-Kim',
-    position: 'VP Internal, Special Events',
-    major: 'Marketing',
-    year: 'U4',
-    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
-    img: '/assets/execs/anhkim.jpg',
-  },
-  {
-    name: 'Alex',
-    position: 'VP Art',
-    major: 'Anatomy & Cell Biology',
-    year: 'U3',
-    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
-    img: '/assets/execs/alex.jpg',
-  },
-  {
-    name: 'Oliver',
-    position: 'VP Equity',
-    major: 'Mechanical Engineering',
-    year: 'U4',
-    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
-    img: '/assets/execs/oliver.jpg',
-  },
-  {
-    name: 'Jeff',
-    position: 'VP Tech',
-    major: 'Computer Science',
-    year: 'U3',
-    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
-    img: '/assets/execs/jeff.jpg',
-  },
-  {
-    name: 'Nicole',
-    position: 'VP Comms',
-    major: 'International Development Studies and Political Science',
-    year: 'U3',
-    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
-    img: '/assets/execs/nicole.jpg',
-  },
-  {
-    name: 'Tina',
-    position: 'VP Art',
-    major: 'Business Analytics',
-    year: 'U2',
-    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
-    img: '/assets/execs/tina.jpg',
-  },
-  {
-    name: 'Keva',
-    position: 'VP Events',
-    major: 'Liberal Arts',
-    year: 'U2',
-    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
-    img: '/assets/execs/keva.jpg',
-  },
-  {
-    name: 'Derek',
-    position: 'VP Events',
-    major: 'Materials Engineering',
-    year: 'U1',
-    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
-    img: '/assets/execs/derek.jpg',
-  },
-  {
-    name: 'Jessica',
-    position: 'VP Finance',
-    major: 'Anatomy & Cell Biology',
-    year: 'U2',
-    desc: 'lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
-    img: '/assets/execs/jessica.webp',
-  },
-];
 ---
 
 <Layout>
@@ -223,87 +132,87 @@ const EXECS = [
     />
   </div>
   <!--Newsletter callout-->
-  <div
-    id='newsletter'
-    class='mx-auto flex max-w-4xl flex-col items-center justify-center px-4 pt-8 sm:px-8 md:pt-20'
-  >
-    <h3 class='text-center text-3xl font-bold md:text-4xl'>
-      Sign up to Usami's Newsletter
-    </h3>
-    <div class='py-4'></div>
-    <div class='text-center text-xl md:text-2xl'>
-      Get announcements and reminders about our events, hear the latest news
-      about our partnerships, get to know the executive team, and more!
-    </div>
-    <div class='py-12 md:py-6'></div>
-    <div class='relative'>
-      <img src='assets/usami_newsletter.svg' class='w-64 md:w-80' />
-      <div class='absolute -right-12 -top-16 md:-right-40 md:top-0'>
-        <a
-          class='relative block'
-          id='newsletter-button'
-          href='http://eepurl.com/9cwIf'
-        >
-          <div
-            class='w-fit rounded-md border border-accent bg-white px-6 py-3 text-xl font-medium text-accent md:px-10'
-          >
-            Sign up
-          </div>
-          <svg
-            width='40'
-            height='40'
-            viewBox='0 0 40 40'
-            fill='white'
-            xmlns='http://www.w3.org/2000/svg'
-            class='absolute -bottom-[38px] left-10'
-          >
-            <path
-              d='M8.61771 0.930275C14.1548 5.57471 14.0071 21.0908 0.544434 39.4942C18.0238 26.6434 31.8453 17.429 38.5718 0.785645'
-              stroke='#CE3703'></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </div>
+  <!-- <div -->
+  <!--   id='newsletter' -->
+  <!--   class='mx-auto flex max-w-4xl flex-col items-center justify-center px-4 pt-8 sm:px-8 md:pt-20' -->
+  <!-- > -->
+  <!--   <h3 class='text-center text-3xl font-bold md:text-4xl'> -->
+  <!--     Sign up to Usami's Newsletter -->
+  <!--   </h3> -->
+  <!--   <div class='py-4'></div> -->
+  <!--   <div class='text-center text-xl md:text-2xl'> -->
+  <!--     Get announcements and reminders about our events, hear the latest news -->
+  <!--     about our partnerships, get to know the executive team, and more! -->
+  <!--   </div> -->
+  <!--   <div class='py-12 md:py-6'></div> -->
+  <!--   <div class='relative'> -->
+  <!--     <img src='assets/usami_newsletter.svg' class='w-64 md:w-80' /> -->
+  <!--     <div class='absolute -right-12 -top-16 md:-right-40 md:top-0'> -->
+  <!--       <a -->
+  <!--         class='relative block' -->
+  <!--         id='newsletter-button' -->
+  <!--         href='http://eepurl.com/9cwIf' -->
+  <!--       > -->
+  <!--         <div -->
+  <!--           class='w-fit rounded-md border border-accent bg-white px-6 py-3 text-xl font-medium text-accent md:px-10' -->
+  <!--         > -->
+  <!--           Sign up -->
+  <!--         </div> -->
+  <!--         <svg -->
+  <!--           width='40' -->
+  <!--           height='40' -->
+  <!--           viewBox='0 0 40 40' -->
+  <!--           fill='white' -->
+  <!--           xmlns='http://www.w3.org/2000/svg' -->
+  <!--           class='absolute -bottom-[38px] left-10' -->
+  <!--         > -->
+  <!--           <path -->
+  <!--             d='M8.61771 0.930275C14.1548 5.57471 14.0071 21.0908 0.544434 39.4942C18.0238 26.6434 31.8453 17.429 38.5718 0.785645' -->
+  <!--             stroke='#CE3703'></path> -->
+  <!--         </svg> -->
+  <!--       </a> -->
+  <!--     </div> -->
+  <!--   </div> -->
+  <!-- </div> -->
   <!--Execs-->
-  <div class='pt-8 sm:px-8 lg:px-16 lg:py-16' id='execs'>
-    <div class='pt-8 text-center text-3xl font-bold lg:text-4xl'>Our Team</div>
-    <div class='py-3'></div>
-    <div class='mx-auto w-24 bg-background py-0.5 lg:py-1'></div>
-    <div class='py-2 lg:py-6'></div>
-    <div
-      class='mx-auto flex max-w-5xl justify-center sm:rounded-xl sm:border sm:shadow-md'
-    >
-      <ExecCarousel execs={EXECS} client:load />
-    </div>
-  </div>
+  <!-- <div class='pt-8 sm:px-8 lg:px-16 lg:py-16' id='execs'> -->
+  <!--   <div class='pt-8 text-center text-3xl font-bold lg:text-4xl'>Our Team</div> -->
+  <!--   <div class='py-3'></div> -->
+  <!--   <div class='mx-auto w-24 bg-background py-0.5 lg:py-1'></div> -->
+  <!--   <div class='py-2 lg:py-6'></div> -->
+  <!--   <div -->
+  <!--     class='mx-auto flex max-w-5xl justify-center sm:rounded-xl sm:border sm:shadow-md' -->
+  <!--   > -->
+  <!--     <ExecCarousel execs={EXECS} client:load /> -->
+  <!--   </div> -->
+  <!-- </div> -->
 </Layout>
 
-<style>
-  #newsletter-button {
-    pointer-events: none;
-  }
-  #newsletter-button > * {
-    pointer-events: auto;
-  }
-  #newsletter-button:hover > div {
-    background-color: theme('colors.accent' / 0.8);
-    color: white;
-    transition: background-color, color;
-    transition-duration: 0.2s;
-  }
-  #newsletter-button:hover > div:hover {
-    background-color: theme('colors.accent' / 0.8);
-    color: white;
-    transition: background-color, color;
-    transition-duration: 0.2s;
-  }
-  #newsletter-button:hover > svg {
-    fill: theme('colors.accent' / 0.8);
-    transition: fill 0.2s;
-  }
-  #newsletter-button:hover > svg:hover {
-    fill: theme('colors.accent' / 0.8);
-    transition: fill 0.2s;
-  }
-</style>
+<!-- <style> -->
+<!--   #newsletter-button { -->
+<!--     pointer-events: none; -->
+<!--   } -->
+<!--   #newsletter-button > * { -->
+<!--     pointer-events: auto; -->
+<!--   } -->
+<!--   #newsletter-button:hover > div { -->
+<!--     background-color: theme('colors.accent' / 0.8); -->
+<!--     color: white; -->
+<!--     transition: background-color, color; -->
+<!--     transition-duration: 0.2s; -->
+<!--   } -->
+<!--   #newsletter-button:hover > div:hover { -->
+<!--     background-color: theme('colors.accent' / 0.8); -->
+<!--     color: white; -->
+<!--     transition: background-color, color; -->
+<!--     transition-duration: 0.2s; -->
+<!--   } -->
+<!--   #newsletter-button:hover > svg { -->
+<!--     fill: theme('colors.accent' / 0.8); -->
+<!--     transition: fill 0.2s; -->
+<!--   } -->
+<!--   #newsletter-button:hover > svg:hover { -->
+<!--     fill: theme('colors.accent' / 0.8); -->
+<!--     transition: fill 0.2s; -->
+<!--   } -->
+<!-- </style> -->
