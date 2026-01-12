@@ -80,7 +80,7 @@ const EXECS: Exec[] = [
     fullImage: true,
   },
   {
-    name: 'Derek Wang',
+    name: 'Derek',
     role: 'VP Events',
     major: 'U2 Materials Engineering',
     favorite: 'Girls Band Cry',
@@ -191,18 +191,15 @@ const ExecOverview = () => {
             >
               <div
                 class={clsx(
-                  'absolute z-10 flex h-10 items-center border-b-[4px] border-gray-800',
-                  !exec.fullImage ? 'w-full' : ''
+                  'absolute z-10 flex h-10 w-full items-center border-b-[4px] border-gray-800'
                 )}
               >
                 <div class='flex h-full w-10 items-center justify-center border-r-[3px] border-gray-800 bg-white text-xl font-bold'>
-                  {i}
+                  {i + 1}
                 </div>
-                {!exec.fullImage && (
-                  <div class='flex h-full w-full items-center bg-white p-1'>
-                    {exec.name}
-                  </div>
-                )}
+                <div class='flex h-full w-full items-center bg-white p-1'>
+                  {exec.name}
+                </div>
               </div>
               <img
                 class={clsx('grayscale', !exec.fullImage ? 'mt-10' : '')}
