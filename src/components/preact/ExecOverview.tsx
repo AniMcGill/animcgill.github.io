@@ -29,7 +29,7 @@ const EXECS: Exec[] = [
     major: 'U2(?) Honours physics',
     favorite: 'CITY THE ANIMATION',
     funFact:
-      'I have seen the (remains of the former) Dejiko building in Akihabara',
+      'The above is a lie. The best anime is Revolutionary Girl Utena actually',
     image: '/assets/execs/raiden.png',
     fullImage: false,
   },
